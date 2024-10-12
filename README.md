@@ -8,7 +8,7 @@
 
 ### HTML
 
-**A1.html** file contains a div with a class _boxbody_ which conatians all the 12 box which are present in the webpage. These box each contains a letter from A-L sequencaly. Each box contain the class _box_ and unqiue id _box1_ to _box12_.
+**A1.html** file contains a div with a class `.boxbody` which conatians all the 12 box which are present in the webpage. These box each contains a letter from A-L sequencaly. Each box contain the class `.box` and unqiue id `.box1` to `.box12`.
 
 ### CSS
 
@@ -25,7 +25,7 @@
 
 ### HTML
 
-**A2.html** there is a div with class _boxbody_ containing two div _box1_ and _box2_. Each of this box contains 6 div which represent each all the 6 faces of the box.
+**A2.html** there is a div with class `.boxbody` containing two div `.box1 and `.box2`. Each of this box contains 6 div which represent each all the 6 faces of the box.
 
 ### CSS
 
@@ -33,3 +33,16 @@
 
 - for `.box1` `transform-style: preserve-3d` is used and then rotate in Y axis to _-30deg_ and perpective of _300px_ and on hover these transformation are removed with an transition
 - for `box2` `perspective` is set to _200px_ and `presepective-origin` is set to _200px -50px_. On hover the transform property of `.box2faces` are remove and `translateZ(-20px)` is set.
+
+## A3
+
+### HTML
+
+**A3.html** conatians a div of class `.conntainer` which holds 5 divs 4 empty div for each box have different color and 1 for the text **Hi!**.
+
+### CSS
+
+**A3style.css** first div `.container` was centered. The `.containere` was made `display: grid` with 2 row and 2 column of _200px by 200px_.
+`.box` has height and width of 200px. and each `.box` `background-color` was assigned. Each `.box` `transfrom-origin` is set with repect to their position.
+`.text` was made to span 2 row and 2 column such that is overlaps with all the `.box`. and centered it using `display: flex`.
+On hover `.container`, `.box` were rotated with transition.
