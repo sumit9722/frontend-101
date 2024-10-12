@@ -9,6 +9,7 @@ body{
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .linkbox{
@@ -84,9 +85,6 @@ a{
 
 @media (max-width : 700px)
 {
-    .mainbody{
-        justify-content: center;
-    }
     .linkbox{
         height: 45vh;
         width:80vw;
