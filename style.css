@@ -5,6 +5,12 @@ body{
     
 }
 
+.mainbody{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .linkbox{
     width: 30vw;
     display: flex;
@@ -78,7 +84,7 @@ a{
 
 @media (max-width : 700px)
 {
-    body{
+    .mainbody{
         justify-content: center;
     }
     .linkbox{
