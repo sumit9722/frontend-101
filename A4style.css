@@ -149,10 +149,14 @@ body{
         border-top: white solid 4px;
         border-bottom: white solid 4px;
         border-right: white solid 4px;
+        border-left:none;
         border-radius: 50%;
     }
     33% {
         border-right: white solid 4px;
+        border-bottom: none;
+        border-right: none;
+        border-left:none;
         border-radius: 50%;
     }
     50% {
