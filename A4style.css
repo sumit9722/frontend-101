@@ -1,0 +1,239 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98svh;
+    --pink : #a81e6b;
+    --dark : #292b26;
+}
+
+@keyframes line1animation {
+    0%{
+
+    }
+
+    25%{
+        rotate: 30deg;
+    }
+
+    80%{
+        rotate: -45deg;
+    }
+
+    100%{
+        translate: 0px 54px;
+        rotate: -45deg;
+    }
+}
+
+@keyframes line3animation {
+    0%{
+
+    }
+
+    25%{
+        rotate: -30deg;
+    }
+
+    80%{
+        rotate: 45deg;
+    }
+
+    100%{
+        translate: 0px -54px;
+        rotate: 45deg;
+    }
+}
+
+@keyframes line2animation {
+    0%{
+
+    }
+
+    25%{
+        translate: -35px 0px;
+    }
+
+    50%{
+        translate: 39px 0px;
+        clip-path: inset(0 0 0 0);
+
+    }
+
+    100%{
+        translate: 39px 0px;
+        clip-path: inset(0 0 0 100%);
+    }
+}
+
+@keyframes linesbarsanimation {
+    
+    50%{
+        border: none;
+        border-radius: 50%;
+    }
+
+    66%{
+        border-right: white solid 4px;
+        border-radius: 50%;
+    }
+
+    84%{
+        border-top: white solid 4px;
+        border-bottom: white solid 4px;
+        border-right: white solid 4px;
+        border-radius: 50%;
+    }
+
+    100%{
+        border: white solid 4px;
+        border-radius: 50%;
+    }
+}
+
+@keyframes line1animation-reverse {
+    0% {
+        translate: 0px 54px;
+        rotate: -45deg;
+    }
+    20% {
+        rotate: -45deg;
+    }
+    75% {
+        rotate: 30deg;
+    }
+    100% {
+        rotate: 0deg;
+    }
+}
+
+@keyframes line3animation-reverse {
+    0% {
+        translate: 0px -54px;
+        rotate: 45deg;
+    }
+    20% {
+        rotate: 45deg;
+    }
+    75% {
+        rotate: -30deg;
+    }
+    100% {
+        rotate: 0deg;
+    }
+}
+
+@keyframes line2animation-reverse {
+    0% {
+        translate: 39px 0px;
+        clip-path: inset(0 0 0 100%);
+    }
+    50% {
+        translate: 39px 0px;
+        clip-path: inset(0 0 0 0);
+    }
+    75% {
+        translate: -35px 0px;
+    }
+    100% {
+        translate: 0px 0px;
+    }
+}
+
+@keyframes linesbarsanimation-reverse {
+    0% {
+        border: white solid 4px;
+        border-radius: 50%;
+    }
+    16% {
+        border-top: white solid 4px;
+        border-bottom: white solid 4px;
+        border-right: white solid 4px;
+        border-radius: 50%;
+    }
+    33% {
+        border-right: white solid 4px;
+        border-radius: 50%;
+    }
+    50% {
+        border: none;
+        border-radius: 50%;
+    }
+}
+
+
+.hamburger{
+    height: 400px;
+    width: 400px;
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    padding: 0px;
+}
+
+.linesbars{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+
+.line
+{
+    background-color: var(--pink);
+    width: 180px;
+    height: 4px;
+    border-radius: 4px;
+}
+
+.line1, .line2, .line3{
+    transition: all 0.25s;
+}
+
+.hamburger:hover{
+    background-color: var(--pink);
+}
+
+.hamburger:hover .line{
+    background-color: white;
+}
+
+.hamburger:hover .line1{
+    animation: line1animation 0.3s ease-in forwards;
+}
+
+.hamburger:hover .line3{
+    animation: line3animation 0.3s ease-in forwards;
+}
+
+
+.hamburger:hover .line2{
+    animation: line2animation 0.3s ease-in forwards;
+}
+
+.hamburger:hover .linesbars{
+    animation: linesbarsanimation 0.3s ease-in forwards;
+}
+
+.hamburger:not(:hover) .line1{
+    animation: line1animation-reverse 0.3s ease-in forwards;
+}
+
+.hamburger:not(:hover) .line3{
+    animation: line3animation-reverse 0.3s ease-in forwards;
+}
+
+.hamburger:not(:hover) .line2{
+    animation: line2animation-reverse 0.3s ease-in forwards;
+}
+
+.hamburger:not(:hover) .linesbars{
+    animation: linesbarsanimation-reverse 0.3s ease-in forwards;
+}
