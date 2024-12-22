@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(29, 29, 29);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap:40px;
+}
+
+.username-inputbox{
+    height: 60px;
+    width: 75vw;
+    max-width: 800px;
+    font-size: 1.6rem;
+    background-color: rgb(71, 71, 71);
+    border-radius: 50px;
+    position: relative;
+    padding-inline-start: 30px;
+    color: rgb(221, 221, 221);
+    background-color: transparent;
+
+}
+
+.username-inputbox-div{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.username-inputbox-div::after{
+    content: "";
+    position: absolute;
+    height: 60px;
+    width: calc(75vw + 80px);
+    max-width: 880px;
+    top:0;
+    left: -15px;
+    background-color: rgb(71, 71, 71);
+    border-radius: 50px;
+    z-index: -1;
+    border-right: rgb(111, 0, 255) solid 5px;
+    border-left: rgb(111, 0, 255) solid 5px;
+    transition: border 0.15s;
+
+}
+
+.username-inputbox:focus{
+    outline: none;
+    border: none;
+}
+
+.username-inputbox-div:focus-within::after{
+    border:none;
+    outline: rgb(111, 0, 255) solid 3px;
+}
+
+#search{
+    background-color: transparent;
+    fill: white;
+    width: 60px;
+    height: 60px;
+}
+
+.search-btn{
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultbox{
+    background-color: rgb(71, 71, 71);
+    width: calc(75vw + 80px);
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    outline: rgb(111, 0, 255) solid 3px;
+    font-size: 30px;
+    gap: 20px;
+    color: aliceblue;
+    display: none;
+    max-width: 880px;
+}
+
+.img{
+    width: 100px;
+    height: 100px;
+    border: rgb(111, 0, 255) solid 3px;
+}
+
+.avatarimg{
+    width: 100px;
+    height: 100px;
+}
+
+.text-info{
+    height: 100px;
+}

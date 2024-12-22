@@ -1,0 +1,18 @@
+body{
+    background-color: aqua;
+    padding: 20px;
+}
+
+.checklist{
+    border-bottom: solid black 8px;
+    border-right: solid black 8px;
+    width: fit-content;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: white;
+    padding: 20px;
+    font-size: 20px;
+}
